@@ -1,0 +1,447 @@
+html, body{
+	margin:0px;
+	padding: 0px;
+}
+
+body{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 500;
+}
+
+
+  /* welcome section*/
+
+.jumbotron{
+  min-height: 900px;
+}
+#welcome
+{
+    margin-top: 5%;
+}
+#welcomebtn{
+ /* margin-top: 4%;*/
+  font-size: 1vh;
+   position:absolute;
+    z-index:0;
+    bottom:5%;
+    right:8%;
+}
+
+#myPhoto{
+  margin-top:15px;
+float:right;
+border:2px solid #31B0D5;
+border-radius:3px;
+
+}
+#policy{
+  font-size: 1em !important;
+   position:absolute;
+   z-index:1;
+   bottom:10%;
+   left:2%;
+
+}
+
+/* end welcome */
+
+#myName{
+  color:#5FB0ED;
+}
+
+/* resize mobile */
+@media (max-width: 500px) {
+  .section{
+    padding-left: 4% !important;
+  }
+
+   #myName{ 
+    font-size: 4vh;;
+    padding-top: 2px;
+  }
+
+    #logo{
+        padding-left:3px;
+    }
+ 
+    #projects {
+        margin: 1px 1px;
+      }
+    
+    #btndetails{
+      margin-right:62px !important;
+    }
+    #btnvisit{
+      margin-left:41px !important;
+    }
+ 
+    .jumbotron{
+        max-height: 15% !important;
+    }
+   #proimg{
+      width: 240px !important;
+    }
+    .media-carousel img{
+      height: 65px !important;
+    }
+
+    #welcomebtn{
+    /*  display: none;*/
+      position: relative;
+      z-index: 1;
+      margin-top: 0%;
+      float: right;
+    }
+
+}
+/* resize project  for overflow */
+
+
+/* resize tablet */
+
+@media (min-width: 480px;) and (max-width:800px) {
+    #feature-carousel {
+        display:none !important;
+    }
+  
+  #welcome{
+    
+    margin-top: 100px !important;
+  }
+  .jumbotron{
+      min-height: 600px;
+      position: relative;
+      padding:80px 10px 0px;
+  }
+   #projects {
+        margin: 1px 1px;
+      }
+}
+
+
+
+/* resizing project col to fit */
+@media screen and (min-width: 550px) and (max-width: 900px) {
+  #projects {
+    margin: 10px 10px;
+  }
+ }
+
+.animate {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-bootsnipp {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(95, 176, 228);
+  border-radius: 0px;
+  margin-bottom: 0px;
+  z-index: 100;
+}
+.navbar-bootsnipp:nth-of-type(2) {
+  border-top-width: 1px;
+  z-index: 50;
+}
+
+.navbar-bootsnipp.affix-top {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.navbar-bootsnipp.affix {
+  top: 0px;
+  width: 100%;
+}
+.navbar-bootsnipp .navbar-toggle .icon-bar {
+  background-color: rgb(95, 176, 228);
+}
+
+.navbar-bootsnipp .navbar-brand {
+  color: rgb(95, 176, 228);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.navbar-bootsnipp .navbar-nav > li > a {
+  border: 0px solid rgb(95, 176, 228);
+  color: rgb(120, 120, 120);
+  padding: 15px 14px;
+}
+
+.navbar-bootsnipp .navbar-nav > li > form > .input-group > input,
+.navbar-bootsnipp .navbar-nav > li > form > .input-group > .input-group-btn > .btn {
+  border-radius: 0px;
+}
+
+.navbar-bootsnipp .navbar-nav > li:not(.disabled).open > a,
+.navbar-bootsnipp .navbar-nav > li:not(.disabled).active > a,
+.navbar-bootsnipp .navbar-nav > li:not(.disabled) > a:hover, 
+.navbar-bootsnipp .navbar-nav > li:not(.disabled) > a:focus {
+  border-left-width: 5px;
+  color: rgb(95, 176, 228);
+  padding-left: 10px;
+}
+.navbar-bootsnipp .navbar-nav > li.disabled > a {
+  color: rgb(200, 200, 200);
+}
+
+.navbar-bootsnipp .navbar-nav > li > .dropdown-menu {
+  border-radius: 0;
+  margin-right: -1px;
+  min-width: 220px;
+  padding: 0px;
+}
+.navbar-bootsnipp .navbar-nav > li:not(.dropdown-right) > .dropdown-menu {
+  left: 0px;
+  margin-left: -1px;
+  right: auto;
+}
+.navbar-bootsnipp .navbar-nav > li > .dropdown-menu > li > a {
+  border-left: 0px solid rgb(95, 176, 228);
+  color: rgb(120, 120, 120);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+.navbar-bootsnipp .navbar-nav > li > .dropdown-menu > li.active > a, 
+.navbar-bootsnipp .navbar-nav > li > .dropdown-menu > li > a:hover, 
+.navbar-bootsnipp .navbar-nav > li > .dropdown-menu > li > a:focus {
+  background-color: rgb(245, 245, 245);
+  border-left-width: 5px;
+  padding-left: 15px;
+}
+
+.navbar .bootsnipp-profile > a {
+  padding-bottom: 9px; 
+  padding-top: 9px; 
+}
+.navbar .bootsnipp-profile > a > img {
+  border-radius: 50%;
+  width: 32px;
+}
+.navbar .bootsnipp-profile > .dropdown-menu {
+  width: 320px;
+}
+.navbar .bootsnipp-profile > .dropdown-menu > li > .row {
+  padding: 5px 15px;
+}
+.navbar .bootsnipp-profile > .dropdown-menu > li > .row img {
+  width: 100%;
+}
+
+.navbar-bootsnipp .bootsnipp-search {
+  display: none;
+}
+.navbar-bootsnipp .bootsnipp-search .form-control {
+  background-color: rgb(235, 235, 235);
+  border-radius: 0px;
+  border-width: 0px;
+  font-size: 24px;
+  padding: 30px 0px;
+}
+.navbar-bootsnipp .bootsnipp-search .form-control {
+  background-color: rgb(235, 235, 235);
+  border-radius: 0px;
+  border-width: 0px;
+  font-size: 24px;
+  padding: 25px 0px;
+}
+.navbar-bootsnipp .bootsnipp-search .form-control:focus {
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn {
+  padding: 14px 16px;
+  border-radius: 0px;
+}
+.navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn.active,
+.navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn:hover,
+.navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn:focus {
+  padding: 14px 16px 14px 15px;
+}
+.navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn-default {
+  background-color: rgb(245, 245, 245);
+}
+.nav-padding {
+  padding-top: 61px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-bootsnipp .navbar-brand {
+    font-size: 20px;
+    height: auto;
+    padding: 15px 5px;
+  }
+  .navbar-bootsnipp .navbar-nav > li > a {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .navbar-bootsnipp .navbar-nav > li:not(.disabled).open > a,
+  .navbar-bootsnipp .navbar-nav > li:not(.disabled).active > a,
+  .navbar-bootsnipp .navbar-nav > li:not(.disabled) > a:hover, 
+  .navbar-bootsnipp .navbar-nav > li:not(.disabled) > a:focus {
+    border-bottom-width: 5px;
+    border-left-width: 0px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+  }
+
+  .navbar-bootsnipp .navbar-nav > li.disabled > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  .navbar-bootsnipp .bootsnipp-search {
+    background-color: rgb(235, 235, 235);
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    -o-transform-origin: 0 0 0;
+    -ms-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    visibility: hidden;
+  }
+  .navbar-bootsnipp .bootsnipp-search.open {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    visibility: visible;  
+  }
+  .navbar-bootsnipp .bootsnipp-search > .container {
+    padding: 0px;
+  }    
+}
+
+/* section size */
+.section{
+	min-height: 900px !important;
+	overflow: hidden;
+	position: relative;
+	padding:80px 10px 0px;
+  
+
+}
+.section:nth-child(even){
+	background-color: #ccc;
+}
+#contact {
+	padding:70px;
+	
+}
+
+#home {
+	background: url(https://res.cloudinary.com/guypro/image/upload/v1493144282/home_rlj3k5.jpg) no-repeat center fixed;
+	-webkit-background-size: cover; /*Used by Safari &amp; Chrome*/
+  -moz-background-size: cover; /* Used by Firefox */
+  -o-background-size: cover; /* Used by Opera */
+  background-size: cover; /* All Modern Browsers */
+  width: 100%;
+  z-index: 1;
+ 
+  }
+
+#home div {
+	background-color: rgba(255,255,0,0.5);
+}
+
+/* skills */
+
+ #skills{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   min-height:900px !important;
+
+}
+
+#skills ul{
+  list-style: none;
+}
+#skills ul li{
+  margin: 25px;
+  color: #78B9FF;
+}
+
+#skills ul li a:hover{
+  text-decoration: none;
+}
+
+#about {
+	background: url(https://res.cloudinary.com/guypro/image/upload/v1493144291/skyscrapers_yfx3xc.jpg) no-repeat center fixed;
+  -webkit-background-size: cover; /*Used by Safari &amp; Chrome*/
+  -moz-background-size: cover; /* Used by Firefox */
+  -o-background-size: cover; /* Used by Opera */
+  background-size: cover; /* All Modern Browsers */
+  width: 100%;
+  z-index: 1;
+}
+#about div {
+    background-color: rgba(255,255,0,0.5);
+}
+
+/* Carousel Graphic Designs Settings */
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+/* scroll top */
+
+.scrollToTop{
+  width:50px; 
+  height:50px;
+  padding:0px; 
+  text-align:right; 
+  background: whiteSmoke;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  position:fixed;
+  top:30px;
+  right:0px;
+  z-index: 3;
+  background: url('../images/top.gif') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+  text-decoration:none;
+}
+
+/* prevent modal project details from sizing the screen */
+.modal-open {
+ overflow: auto; 
+}
+
+/* move the modal to the middle screen */
+#projectModal{
+padding-top: 100px;
+}
+
+#social{
+  float: right;
+  color: #5FB0ED;
+  padding: 0px 10px 100px 0px;
+}
+
+
+  
