@@ -336,11 +336,10 @@ border-radius:3px;
 	overflow: hidden;
 	position: relative;
 	padding:80px 10px 0px;
-  
-
+    
 }
 .section:nth-child(even){
-	background-color: #ccc;
+	background-color:white;
 }
 #contact {
 	padding:70px;
@@ -367,7 +366,7 @@ border-radius:3px;
  #skills{
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    min-height:900px !important;
-
+   background-color: white;
 }
 
 #skills ul{
@@ -383,16 +382,19 @@ border-radius:3px;
 }
 
 #about {
-	background: url(https://res.cloudinary.com/guypro/image/upload/v1493144291/skyscrapers_yfx3xc.jpg) no-repeat center fixed;
+	/* background: url(https://res.cloudinary.com/guypro/image/upload/v1493144291/skyscrapers_yfx3xc.jpg) no-repeat center fixed; */
+  /* background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/home.jpg); */
   -webkit-background-size: cover; /*Used by Safari &amp; Chrome*/
   -moz-background-size: cover; /* Used by Firefox */
   -o-background-size: cover; /* Used by Opera */
   background-size: cover; /* All Modern Browsers */
   width: 100%;
   z-index: 1;
+  background: rgb(13, 79, 136);
 }
 #about div {
-    background-color: rgba(255,255,0,0.5);
+    /* background-color: rgba(255,255,0,0.5); */
+    /* background-color: rgba(78, 166, 248, 0.541); */
 }
 
 /* Carousel Graphic Designs Settings */

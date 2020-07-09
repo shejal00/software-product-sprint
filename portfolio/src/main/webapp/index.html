@@ -4,37 +4,41 @@
         <meta charset="UTF-8">
         <title>My Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/navBar.css">
+        <link rel="stylesheet" href="css/topBar.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
         <script src="script.js"></script>
     </head>
   
     <body data-spy="scroll" data-target="#navbar" data-offset="90"> 
         <nav class="navbar navbar-fixed-top navbar-inverse" id="navbar">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        </button>
-                    <div class="[ animbrand ]">
-                        <a class="[ navbar-brand ][ animate ]" id="myName" href="#" style="padding-left: 30px;">Shejal Gupta</a>
-                    </div>
-                </div>
-                    
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#projects" class="[ animate ]">Projects</a></li>
-                        <li><a href="#skills" class="[ animate ]">Skills</a></li>
-                        <li><a href="#about" class="[ animate ]">About Me</a></li>
-                        <li><a href="#contact" class="[ animate ]">Contact</a></li>
-                    </ul>
-                </div>            
-            </div>        
+                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> 
+          <a class="navbar-brand" href="#">SHEJAL GUPTA</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li> 
+            <li><a href="#competitions">Competitions</a></li>
+          </ul> 
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
         </nav>
 
         <div class="jumbotron feature" id="jumbowelcome">
@@ -62,78 +66,305 @@
         <div class="clearfix"></div>
         <div style="margin:5px;width:5px;height:5px;"></div> 
 
-        <section id="about" class="section">
+        <!-- <section id="about" class="section">
             <div class="container">
-                <h2>About Me</h2>
-                <p>Hi, my name is Shejal Gupta. I am a third-year Computer Science student at Bits Pilani K.K. Birla Goa Campus. I am always enthusiastic to learn and undertake new challenges. I identify and develop opportunities.
+                <h1 class="text-center">About Me</h1> 
+                <hr class="star-portfolio">
+                <p style={{font-color:'white'}}>Hi, my name is Shejal Gupta. I am a third-year Computer Science student at Bits Pilani K.K. Birla Goa Campus. I am always enthusiastic to learn and undertake new challenges. I identify and develop opportunities.
                 </p>
                 <br/>
                 <br/>
             </div>
-        </section>
+        </section> -->
+     <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About Me</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-lg-4 col-lg-offset-2">
+                    <p class="content-text">Hey there! I am a junior software developer based in Mumbai, India. I work with some of the popular front end technologies to create beautiful websites that get noticed. I seek experience to gain more knowledge in the web development field.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="content-text">If you are in need of a beautiful simple website, I'm your guy. I look forward to talking to you soon!</p>
+                </div> -->
+                <p style={{font-color:'white'}}>Hi, my name is Shejal Gupta. I am a third-year Computer Science student at Bits Pilani K.K. Birla Goa Campus. I am always enthusiastic to learn and undertake new challenges. I identify and develop opportunities.
+                </p>
+                <div class="col-lg-8 col-lg-offset-2 text-center contact-button">
+                    <a href="#contact" class="btn btn-lg btn-outline">
+                        <i class="fa fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section id="projects" class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2>Projects</h2>
-                    </div>	
-                </div>
-                <div class="row">		
-                    <div class="col-lg-12" style="padding:0px;">
-                        <div class='col-sm-4' style='margin:0px;padding:1vh;text-align:center;'>
-                            <h5 style="text-align:center;"><b>Test Management Tool</b></h5>
-                            <img id='proimg' src='images/test-management-tool.jpeg' width='270px' height='180px' style='border:2px solid #31B0D5;border-radius:3px' alt='project' /></a>
-                        </div>
+		<div class="portfolio-container container">
+			<h1 class="text-center">Projects</h1>
+      <hr class="star-portfolio">
+			<div class="row">
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
 
-                        <div class='col-sm-4' style='margin:0px;padding:1vh;text-align:center;'>
-                            <h5 style="text-align:center;"><b>Implementation of Information Retrieval models</b></h5>
-                            <img id='proimg' src='images/information-retrieval.jpg' width='270px' height='180px' style='border:2px solid #31B0D5;border-radius:3px' alt='project' /></a>
-                        </div>
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
 
-                        <div class='col-sm-4' style='margin:0px;padding:1vh;text-align:center;'>
-                            <h5 style="text-align:center;"><b>Biomedical Discovery using Text Mining</b></h5>
-                            <img id='proimg' src='images/biomedical.jpeg' width='270px' height='180px' style='border:2px solid #31B0D5;border-radius:3px' alt='project' /></a>
-                        </div>
-                    </div>	
-                </div>	
-            </div>
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>	
+			</div>
+		</div>
         </section>
+     <section id="skills" class="section">
+            <div class="container">
+            <h1 class="text-center">Skills</h1>
+            <hr class="star-portfolio">
+        <div class="col-xs-12 col-md-6">
+          <p class="lead text-center">React.js</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              <span class="sr-only">Reacts.js 60%</span>
+            </div>
+          </div>
+          <p class="lead text-center">JavaScript</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              <span class="sr-only">JavaScript 60%</span>
+            </div>
+          </div>
+          <p class="lead text-center">C++</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+              <span class="sr-only">C++ 90%</span>
+            </div>
+          </div>
+          <p class="lead text-center">MySQL</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+              <span class="sr-only">MySQL 80%</span>
+            </div>
+          </div>
+        </div>
 
-        <section id="skills" class="section">
-            <div class="container" style="min-height:300px !important;">
-                <h2>Skills</h2>
-                    <ul>
-                    <li><i class="fa fa-connectdevelop" aria-hidden="true"></i><a href="#skills"><b> Programming: </b>C++, C Programming, Python3, Java, R, Verilog, HTML, CSS, JavaScript, React, Node.</a></li>
-                    <li><i class="fa fa-database"></i><a href="#skills"><b> Database Designs: </b> MySQL</a></li>
-                </ul>
-                <div style="margin:5px;width:5px;height:5px;"></div>
+        <div class="col-xs-12 col-md-6">
+          <p class="lead text-center">Node.js</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+              <span class="sr-only">Node.js 60%</span>
+            </div>
+          </div>
+          <p class="lead text-center">CSS</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+              <span class="sr-only">CSS 80%</span>
+            </div>
+          </div>
+          <p class="lead text-center">Python3</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+              <span class="sr-only">Python3 40%</span>
+            </div>
+          </div>
+          <p class="lead text-center">Verilog</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+              <span class="sr-only">Verilog 80%</span>
+            </div>
+          </div>
+        </div>
             </div>
         </section>
+     <section id="competitions" class="section">
+		<div class="portfolio-container container">
+			<h1 class="text-center">Competitions</h1>
+      <hr class="star-portfolio">
+			<div class="row">
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
 
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Be it to know a little more about me, request more info about my experience, ask for my resume, or if you need help with a project, be it translation or web development related, please feel free to contact me! I would love to connect with you on one of the many social media channels. Let's build something great together!
-                </p>
-                <br/>
-                <br/>
-            </div>
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+					<div class=" portfolio-card">
+						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+
+						<div class="portfolio-img-desc">
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>			
+					</div>
+				</div>
+				
+			</div>
+		</div>
         </section>
 
-        <footer>
-            <div class="container"></div>
-        </footer>
-        <footer>
-        <hr style="border-width:1px;border-color:#000000;"">
-        <div id="footer">
-            <h4 style="float:left;padding:0px 10px 30px 0px;color:#000000;font-size:x-large"><b>&copy; 2020 Shejal Gupta</b></h4>
-            </div>	
-            <div id="social" style="color:#000000;float:right">					
-                <a href="https://www.linkedin.com/in/shejal-gupta-90073b1a2/" target="_blank"><i class="fa fa-linkedin-square fa-2x" style="font-size:48px;color:black"></i> </a>
-                <a href="https://www.facebook.com/profile.php?id=100008754307557" target="_blank"><i class="fa fa-facebook-official fa-2x" style="font-size:48px;color:black"></i> </a>
-                <a href="https://github.com/shejal00" target="_blank"><i class="fa fa-github-square fa-2x" style="font-size:48px;color:black"></i> </a>
-            </div>
-        </footer>
+       
+
+    <!-- Contact form -->
+	<div class="container-fluid contact-me-container content-section" id="contact">
+		<div class="container">
+			<h1 class="intro-text text-center">Contact Me</h1>   
+      <hr class="star-light">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-user"></i></div>
+							<input type="text" class="form-control" id="name" placeholder="Name">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-at"></i></div>
+							<input type="text" class="form-control" id="email" placeholder="Email ID">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-phone"></i></div>
+							<input type="text" class="form-control" id="phone" placeholder="Phone Number">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12">
+					<textarea class="form-control" rows="5" placeholder="Message"></textarea>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<button class="btn btn-default submit-button btn-lg btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+			</div>
+		</div>
+	</div>
+<!-- Footer -->
+	<footer>
+		<div class="container footer-container">
+			<div class="row footer-row">
+				<div class="col-xs-12 col-sm-6 col-md-6 text-center">
+			<h3 class="text-center">Let's Connect</h3>
+            <p>Be it to know a little more about me, request more info about my experience, ask for my resume, or if you need help with a project, be it frontend or backend related, feel free to reach me! I would love to connect with you on one of the many social media channels.
+        </p>
+      <p> Let's build something great together!</p>
+      
+			</div>
+
+				<div class="col-xs-12 col-md-6 col-sm-6 social-section">
+					<div class="text-center">
+						<h3 class="text-center">I can be found here</h3>
+				<div class="text-center social-buttons">
+						<a href="https://www.facebook.com/profile.php?id=100008754307557" class="btn btn-default btn-lg social-button link-facebook"><i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="https://github.com/shejal00" class="btn btn-default btn-lg social-button link-codepen"><i class="fa fa-github"></i>
+						</a>
+
+						<a href="https://www.linkedin.com/in/shejal-gupta-90073b1a2/" class="btn btn-default btn-lg social-button link-linkedin"><i class="fa fa-linkedin"></i>
+						</a>
+          
+					</div><hr class="footer-hr">
+            <h4 class="author">Made with <i class="fa fa-heart"></i> by <strong>Shejal Gupta</strong></h4>
+
+            <a  class="tel" href="tel:9999988888" type="tel"><i class="fa fa-mobile"></i><span> +91 9145649505</span></a>
+					</div>
+				</div>
+			</div><hr class="copyright">
+      <h4><i class="fa fa-copyright"></i> COPYRIGHTS 2020 ALL RIGHTS RESERVED</h4>
+		</div>
+	</footer>
     </body>
 </html>
+
+  
