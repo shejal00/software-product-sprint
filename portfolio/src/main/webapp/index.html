@@ -3,56 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="css/navBar.css">
-        <link rel="stylesheet" href="css/topBar.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="css/navBar.css" type="text/css">
+        <link rel="stylesheet" href="css/topBar.css" type="text/css">
+        <link rel="stylesheet" href="css/cards.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     </head>
-  
+
+<!-- Navigation Bar -->
     <body data-spy="scroll" data-target="#navbar" data-offset="90"> 
         <nav class="navbar navbar-fixed-top navbar-inverse" id="navbar">
-                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button> 
-          <a class="navbar-brand" href="#">SHEJAL GUPTA</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li> 
-            <li><a href="#competitions">Competitions</a></li>
-          </ul> 
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button> 
+                        <a class="navbar-brand" href="#">SHEJAL GUPTA</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li> 
+                            <li><a href="#competitions">Competitions</a></li>
+                        </ul> 
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
         </nav>
 
         <div class="jumbotron feature" id="jumbowelcome">
             <div class="container">
                 <div>
-                    <img id='myPhoto' src='images/shejal_gupta.jpeg' width='30%' height='20%' marginLeft:'20%' alt='shejal picture' />
+                    <img id='myPhoto' src='images/shejal_gupta.jpeg' class="my-image" alt='shejal picture' />
                 </div>
                     <div id="feature-carousel" class="carousel slide visible-lg visible-md" data-ride="carousel">    
                         <div class="carousel-inner" role="listbox" id="welcome">
                             <div class="item active">
-                            <h2>Welcome to Shejal's Portfolio.</h2>
+                                <h2>Welcome to Shejal's Portfolio.</h2>
                             </div>
                             <div class="item">
-                            <h2>Please feel free to browse my site.</h2>
+                                <h2>Please feel free to browse my site.</h2>
                             </div> 
                         </div>
                     </div>
@@ -63,308 +62,258 @@
             <a href="#about" class="btn btn-info btn-xs">GOT IT!</a>
         </div>
 
-        <div class="clearfix"></div>
-        <div style="margin:5px;width:5px;height:5px;"></div> 
-
-        <!-- <section id="about" class="section">
-            <div class="container">
-                <h1 class="text-center">About Me</h1> 
-                <hr class="star-portfolio">
-                <p style={{font-color:'white'}}>Hi, my name is Shejal Gupta. I am a third-year Computer Science student at Bits Pilani K.K. Birla Goa Campus. I am always enthusiastic to learn and undertake new challenges. I identify and develop opportunities.
-                </p>
-                <br/>
-                <br/>
-            </div>
-        </section> -->
-     <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About Me</h2>
-                    <hr class="star-light">
+<!-- About -->
+        <section class="success" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>About Me</h2>
+                        <hr class="star-light">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <!-- <div class="col-lg-4 col-lg-offset-2">
-                    <p class="content-text">Hey there! I am a junior software developer based in Mumbai, India. I work with some of the popular front end technologies to create beautiful websites that get noticed. I seek experience to gain more knowledge in the web development field.
-                    </p>
+                <div class="row">
+                    <p style={{font-color:'white'}}>Hi, my name is Shejal Gupta. I am a third-year Computer Science student at Bits Pilani K.K. Birla Goa Campus. I am always enthusiastic to learn and undertake new challenges. I identify and develop opportunities.</p>
+                    <div class="col-lg-8 col-lg-offset-2 text-center contact-button">
+                        <a href="#contact" class="btn btn-lg btn-outline">
+                            <i class="fa fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <p class="content-text">If you are in need of a beautiful simple website, I'm your guy. I look forward to talking to you soon!</p>
-                </div> -->
-                <p style={{font-color:'white'}}>Hi, my name is Shejal Gupta. I am a third-year Computer Science student at Bits Pilani K.K. Birla Goa Campus. I am always enthusiastic to learn and undertake new challenges. I identify and develop opportunities.
-                </p>
-                <div class="col-lg-8 col-lg-offset-2 text-center contact-button">
-                    <a href="#contact" class="btn btn-lg btn-outline">
-                        <i class="fa fa-envelope"></i> Contact Me
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <section id="projects" class="section">
-		<div class="portfolio-container container">
-			<h1 class="text-center">Projects</h1>
-      <hr class="star-portfolio">
-			<div class="row">
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>	
-			</div>
-		</div>
-        </section>
-     <section id="skills" class="section">
-            <div class="container">
-            <h1 class="text-center">Skills</h1>
-            <hr class="star-portfolio">
-        <div class="col-xs-12 col-md-6">
-          <p class="lead text-center">React.js</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-              <span class="sr-only">Reacts.js 60%</span>
-            </div>
-          </div>
-          <p class="lead text-center">JavaScript</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-              <span class="sr-only">JavaScript 60%</span>
-            </div>
-          </div>
-          <p class="lead text-center">C++</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-              <span class="sr-only">C++ 90%</span>
-            </div>
-          </div>
-          <p class="lead text-center">MySQL</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              <span class="sr-only">MySQL 80%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-md-6">
-          <p class="lead text-center">Node.js</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-              <span class="sr-only">Node.js 60%</span>
-            </div>
-          </div>
-          <p class="lead text-center">CSS</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              <span class="sr-only">CSS 80%</span>
-            </div>
-          </div>
-          <p class="lead text-center">Python3</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-              <span class="sr-only">Python3 40%</span>
-            </div>
-          </div>
-          <p class="lead text-center">Verilog</p>
-          <div class="progress">
-            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-              <span class="sr-only">Verilog 80%</span>
-            </div>
-          </div>
-        </div>
             </div>
         </section>
-     <section id="competitions" class="section">
-		<div class="portfolio-container container">
-			<h1 class="text-center">Competitions</h1>
-      <hr class="star-portfolio">
-			<div class="row">
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
 
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				<div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-					<div class=" portfolio-card">
-						<img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
-
-						<div class="portfolio-img-desc">
-							<p>Lorem ipsum dolor sit amet</p>
-						</div>			
-					</div>
-				</div>
-				
-			</div>
-		</div>
+<!-- Projects -->
+        <section id="projects" class="section">
+            <div class="portfolio-container container">
+                <h1 class="text-center">Projects</h1>
+                <hr class="star-portfolio">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+                        <div class=" portfolio-card">
+                            <img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+                            <div class="portfolio-img-desc">
+                                <p>Test Management Tool</p>
+                            </div>			
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+                        <div class=" portfolio-card">
+                            <img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+                            <div class="portfolio-img-desc">
+                                <p>Implementation of Information Retrieval models</p>
+                            </div>			
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+                        <div class=" portfolio-card">
+                            <img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+                            <div class="portfolio-img-desc">
+                                <p>Biomedical Discovery using Text Mining</p>
+                            </div>			
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+                        <div class=" portfolio-card">
+                            <img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+                            <div class="portfolio-img-desc">
+                                <p>Test Management Tool</p>
+                            </div>			
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+                        <div class=" portfolio-card">
+                            <img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+                            <div class="portfolio-img-desc">
+                                <p>Test Management Tool</p>
+                            </div>			
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+                        <div class=" portfolio-card">
+                            <img src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg" alt="Portfolio" class="img-responsive portfolio-img">
+                            <div class="portfolio-img-desc">
+                                <p>Test Management Tool</p>
+                            </div>			
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-       
+<!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h1 class="text-center">Skills</h1>
+                <hr class="star-portfolio">
+                <div class="col-xs-12 col-md-6">
+                    <p class="lead text-center">React.js</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            60%
+                        </div>
+                    </div>
+                    <p class="lead text-center">JavaScript</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            60%
+                        </div>
+                    </div>
+                    <p class="lead text-center">C++</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                            90%
+                        </div>
+                    </div>
+                    <p class="lead text-center">MySQL</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            80% 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <p class="lead text-center">Node.js</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            60%
+                        </div>
+                    </div>
+                    <p class="lead text-center">CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            80%
+                        </div>
+                    </div>
+                    <p class="lead text-center">Python3</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                            40%
+                        </div>
+                    </div>
+                    <p class="lead text-center">Verilog</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            80%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Contact form -->
-	<div class="container-fluid contact-me-container content-section" id="contact">
-		<div class="container">
-			<h1 class="intro-text text-center">Contact Me</h1>   
-      <hr class="star-light">
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-addon"><i class="fa fa-user"></i></div>
-							<input type="text" class="form-control" id="name" placeholder="Name">
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-at"></i></div>
-							<input type="text" class="form-control" id="email" placeholder="Email ID">
-						</div>
-					</div>
+<!-- Competitions -->
+        <section id="competitions" class="section">
+            <div class="content" >
+                <!-- card -->
+                <div class="card">
+                    <div class="icon"><i class="material-icons md-36">leaderboard</i></div>
+                    <p class="title">Code Jam to I/O for Women 2020</p>
+                    <p class="text">Ranked 132 across globe, invited to attend Google's Annual Developer Conference at Mountain View, CA.</p>
+                </div>
+                <!-- end card -->
+                <!-- card -->
+                <div class="card">
+                    <div class="icon"><i class="material-icons md-36">leaderboard</i></div>
+                    <p class="title">Uber She++ Tech Event 2020</p>
+                    <p class="text">Invited to an all expense paid trip to Uber India Office in Bangalore based on Uber's She++ coding test.</p>
+                </div>
+                <!-- end card -->
+                <!-- card -->
+                <div class="card">
+                    <div class="icon"><i class="material-icons md-36">leaderboard</i></div>
+                    <p class="title">Code UR Way</p>
+                    <p class="text">Ranked 8th all across India in Visa's Code UR Way coding contest.</p>
+                </div>
+                <!-- end card -->   
+            </div>
+            <div class="content" >
+                <!-- card -->
+                <div class="card">
+                    <div class="icon"><i class="material-icons md-36">code</i></div>
+                    <p class="title">Microsoft Codess</p>
+                    <p class="text">Part of Microsoft's Codess which is a community of female coders initiated by Microsoft.</p>
+                </div>
+                <!-- end card -->
+                <!-- card -->
+                <div class="card">
+                    <div class="icon"><i class="material-icons md-36">code</i></div>
+                    <p class="title">TalentSprint WE Program, supported by Google</p>
+                    <p class="text">Got selected in an online selection test and was invited to a Bootcamp in Hyderabad.</p>
+                </div>
+                <!-- end card -->
+                <!-- card -->
+                <div class="card">
+                    <div class="icon"><i class="material-icons md-36">code</i></div>
+                    <p class="title">GE Healthcare Women Code Jam </p>
+                    <p class="text">Ranked 24th in an online coding competition across India and was awarded with a scholarship.</p>
+                </div>
+                <!-- end card -->   
+            </div>
+         </section>
 
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-addon"><i class="fa fa-phone"></i></div>
-							<input type="text" class="form-control" id="phone" placeholder="Phone Number">
-						</div>
-					</div>
-				</div>
+<!-- Contact form -->
+        <div class="container-fluid contact-me-container content-section" id="contact">
+            <div class="container">
+                <h1 class="intro-text text-center">Contact Me</h1>   
+                <hr class="star-light">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input type="text" class="form-control" id="email" placeholder="Email ID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-default submit-button btn-lg btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+                </div>
+            </div>
+        </div>
 
-				<div class="col-sm-12">
-					<textarea class="form-control" rows="5" placeholder="Message"></textarea>
-				</div>
-			</div>
-
-			<div class="text-center">
-				<button class="btn btn-default submit-button btn-lg btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
-			</div>
-		</div>
-	</div>
 <!-- Footer -->
-	<footer>
-		<div class="container footer-container">
-			<div class="row footer-row">
-				<div class="col-xs-12 col-sm-6 col-md-6 text-center">
-			<h3 class="text-center">Let's Connect</h3>
-            <p>Be it to know a little more about me, request more info about my experience, ask for my resume, or if you need help with a project, be it frontend or backend related, feel free to reach me! I would love to connect with you on one of the many social media channels.
-        </p>
-      <p> Let's build something great together!</p>
-      
-			</div>
-
-				<div class="col-xs-12 col-md-6 col-sm-6 social-section">
-					<div class="text-center">
-						<h3 class="text-center">I can be found here</h3>
-				<div class="text-center social-buttons">
-						<a href="https://www.facebook.com/profile.php?id=100008754307557" class="btn btn-default btn-lg social-button link-facebook"><i class="fa fa-facebook"></i>
-						</a>
-
-						<a href="https://github.com/shejal00" class="btn btn-default btn-lg social-button link-codepen"><i class="fa fa-github"></i>
-						</a>
-
-						<a href="https://www.linkedin.com/in/shejal-gupta-90073b1a2/" class="btn btn-default btn-lg social-button link-linkedin"><i class="fa fa-linkedin"></i>
-						</a>
-          
-					</div><hr class="footer-hr">
-            <h4 class="author">Made with <i class="fa fa-heart"></i> by <strong>Shejal Gupta</strong></h4>
-
-            <a  class="tel" href="tel:9999988888" type="tel"><i class="fa fa-mobile"></i><span> +91 9145649505</span></a>
-					</div>
-				</div>
-			</div><hr class="copyright">
-      <h4><i class="fa fa-copyright"></i> COPYRIGHTS 2020 ALL RIGHTS RESERVED</h4>
-		</div>
-	</footer>
+        <footer>
+            <div class="container footer-container">
+                <div class="row footer-row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+                        <h3 class="text-center">Let's Connect</h3>
+                        <p>Be it to know a little more about me, request more info about my experience, ask for my resume, or if you need help with a project, be it frontend or backend related, feel free to reach me! I would love to connect with you on one of the many social media channels.</p>
+                        <p> Let's build something great together!</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6 col-sm-6 social-section">
+                        <div class="text-center">
+                            <h3 class="text-center">I can be found here</h3>
+                            <div class="text-center social-buttons">
+                                <a href="https://www.facebook.com/profile.php?id=100008754307557" class="btn btn-default btn-lg social-button link-facebook"><i class="fa fa-facebook"></i></a>   
+                                <a href="https://github.com/shejal00" class="btn btn-default btn-lg social-button link-codepen"><i class="fa fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/shejal-gupta-90073b1a2/" class="btn btn-default btn-lg social-button link-linkedin"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                            <hr class="footer-hr">
+                            <h4 class="author">Made with <i class="fa fa-heart"></i> by <strong>Shejal Gupta</strong></h4>
+                        </div>
+                    </div>
+                </div><hr class="copyright">
+                <h4><i class="fa fa-copyright"></i> COPYRIGHTS 2020 ALL RIGHTS RESERVED</h4>
+            </div>
+        </footer>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"><script>
     </body>
 </html>
-
-  
