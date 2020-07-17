@@ -38,17 +38,28 @@
 // });
 
 /**
- * The above code is organized to show each individual step, but we can use an
- * ES6 feature called arrow functions to shorten the code. This function
- * combines all of the above code into a single Promise chain. You can use
- * whichever syntax makes the most sense to you.
+ * Returns hardcoded comments
  */
-function getHello() {
-  fetch('/data').then(response => response.text()).then((message) => {
-    document.getElementById('message-container').innerText = message;
+function getComments() {
+  fetch('/data').then(response => response.json()).then((message) => {
+    const commentListElement = document.getElementById('message-container');
+    commentListElement.innerHTML = '';
+    commentListElement.appendChild(
+        createListElement('Name: ' + message[0]));
+    commentListElement.appendChild(
+        createListElement('Message: ' + message[1]));
+    commentListElement.appendChild(
+        createListElement(message[2]));
   });
 }
-  
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
 /**
  * Adds a random greeting to the page.
  */
