@@ -33,21 +33,37 @@ import java.util.Arrays;
 
 @WebServlet("/comments")
 public class DataServlet extends HttpServlet {
-    ArrayList<String> Comments = new ArrayList<String>();
-
+    DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+   
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {       
-        // Respond with the result.  
+        Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
+        PreparedQuery results = datastore.prepare(query); 
+        List<Comment> comments = new ArrayList<>();
+        
+        for (Entity entity : results.asIterable()) {
+            String message = (String) entity.getProperty("message");
+            long timestamp = (long) entity.getProperty("timestamp");
+            Comment comment = new Comment(timestamp, message);
+            comments.add(comment);
+        } 
+
+        // Respond with the result.
         Gson gson = new Gson();    
-        String resp = gson.toJson(Comments);
         response.setContentType("application/json");
-        response.getWriter().println(resp);
+        response.getWriter().println(gson.toJson(comments));
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {       
-        String comments = getParameter(request, "message");
-        Comments.add(comments);
+        String message = getParameter(request, "message");
+        long timestamp = System.currentTimeMillis();
+
+        Entity commentEntity = new Entity("Comment");
+        commentEntity.setProperty("message", message);
+        commentEntity.setProperty("timestamp", timestamp);
+
+        datastore.put(commentEntity);
         response.sendRedirect("/index.html");
     }
 

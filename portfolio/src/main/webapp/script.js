@@ -20,7 +20,7 @@ function getComments() {
     const commentListElement = document.getElementById('message-container');
     for (let i = 0; i <comments.length; i++) {
         commentListElement.appendChild(
-        createListElement(comments[i])
+        createListElement(comments[i].message)
         );
     }
   });
