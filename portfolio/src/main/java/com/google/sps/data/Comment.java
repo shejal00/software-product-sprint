@@ -13,10 +13,12 @@
 // limitations under the License.
 
 package com.google.sps.data;
+
 public class Comment {
     private final long messageId;
     private final long timestamp;
     private final String message;
+    
     public Comment(long messageId, long timestamp, String message) {
         this.messageId = messageId;
         this.timestamp = timestamp;

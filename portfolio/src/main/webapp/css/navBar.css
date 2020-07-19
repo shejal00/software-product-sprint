@@ -467,3 +467,12 @@ body{
     height:20%;
     margin-left:20%;
 }
+
+.contact-form{
+    margin-top:5%;
+}
+
+.comments-text{
+    color: white;
+    font-size: large;
+}

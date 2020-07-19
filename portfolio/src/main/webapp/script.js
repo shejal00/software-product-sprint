@@ -12,54 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-// // // navbar
-// $(function() {
-//     $('a[href="#toggle-search"], .navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn[type="reset"]').on('click', function(event) {
-//         event.preventDefault();
-//         $('.navbar-bootsnipp .bootsnipp-search .input-group > input').val('');
-//         $('.navbar-bootsnipp .bootsnipp-search').toggleClass('open');
-//         $('a[href="#toggle-search"]').closest('li').toggleClass('active');
-
-//         if ($('.navbar-bootsnipp .bootsnipp-search').hasClass('open')) {
-//             /* I think .focus dosen't like css animations, set timeout to make sure input gets focus */
-//             setTimeout(function() { 
-//                 $('.navbar-bootsnipp .bootsnipp-search .form-control').focus();
-//             }, 100);
-//         }           
-//     });
-
-//     $(document).on('keyup', function(event) {
-//         if (event.which == 27 && $('.navbar-bootsnipp .bootsnipp-search').hasClass('open')) {
-//             $('a[href="#toggle-search"]').trigger('click');
-//         }
-//     });
-    
-// });
-
 /**
- * Returns hardcoded comments
+ * Returns comments in the form of list
  */
-// function getComments() {
-//   fetch('/data').then(response => response.json()).then((message) => {
-//     const commentListElement = document.getElementById('message-container');
-//     commentListElement.innerHTML = '';
-//     commentListElement.appendChild(
-//         createListElement('Name: ' + message[0]));
-//     commentListElement.appendChild(
-//         createListElement('Message: ' + message[1]));
-//     commentListElement.appendChild(
-//         createListElement(message[2]));
-//   });
-// }
+function getComments() {
+    fetch('/comments').then(response => response.json()).then((comments) => {
+    const commentListElement = document.getElementById('message-container');
+    for (let i = 0; i <comments.length; i++) {
+        commentListElement.appendChild(
+        createListElement(comments[i])
+        );
+    }
+  });
+}
 
-// /** Creates an <li> element containing text. */
-// function createListElement(text) {
-//   const liElement = document.createElement('li');
-//   liElement.innerText = text;
-//   return liElement;
-// }
-
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
+}
 
 /**
  * Adds a random greeting to the page.
