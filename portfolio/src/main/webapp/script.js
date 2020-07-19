@@ -40,25 +40,26 @@
 /**
  * Returns hardcoded comments
  */
-function getComments() {
-  fetch('/data').then(response => response.json()).then((message) => {
-    const commentListElement = document.getElementById('message-container');
-    commentListElement.innerHTML = '';
-    commentListElement.appendChild(
-        createListElement('Name: ' + message[0]));
-    commentListElement.appendChild(
-        createListElement('Message: ' + message[1]));
-    commentListElement.appendChild(
-        createListElement(message[2]));
-  });
-}
+// function getComments() {
+//   fetch('/data').then(response => response.json()).then((message) => {
+//     const commentListElement = document.getElementById('message-container');
+//     commentListElement.innerHTML = '';
+//     commentListElement.appendChild(
+//         createListElement('Name: ' + message[0]));
+//     commentListElement.appendChild(
+//         createListElement('Message: ' + message[1]));
+//     commentListElement.appendChild(
+//         createListElement(message[2]));
+//   });
+// }
 
-/** Creates an <li> element containing text. */
-function createListElement(text) {
-  const liElement = document.createElement('li');
-  liElement.innerText = text;
-  return liElement;
-}
+// /** Creates an <li> element containing text. */
+// function createListElement(text) {
+//   const liElement = document.createElement('li');
+//   liElement.innerText = text;
+//   return liElement;
+// }
+
 
 /**
  * Adds a random greeting to the page.

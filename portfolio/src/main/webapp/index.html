@@ -329,7 +329,7 @@
          </section>
 
 <!-- Contact form -->
-        <div class="container-fluid contact-me-container content-section" id="contact">
+        <!-- <div class="container-fluid contact-me-container content-section" id="contact">
             <div class="container">
                 <h1 class="intro-text text-center">Contact Me</h1>   
                 <hr class="star-light">
@@ -361,6 +361,23 @@
                 <div class="text-center">
                     <button class="btn btn-default submit-button btn-lg btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
                 </div>
+            </div>
+        </div> -->
+
+<!--Comments -->
+        <div class="container-fluid contact-me-container content-section" id="contact">
+            <div class="container">
+                <h1 class="intro-text text-center">Comments</h1>   
+                <hr class="star-light">
+                <p id="comments-container"></p>
+                <form action="/comments" method="post">
+                    <div class="col-sm-12">
+                        <textarea name="message" class="form-control" rows="5" placeholder="Share your thoughts"></textarea>
+                    </div>
+                <div class="text-center">
+                    <button class="btn btn-default submit-button btn-lg btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+                </div>
+                </form>
             </div>
         </div>
 
