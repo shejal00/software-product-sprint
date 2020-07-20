@@ -1,0 +1,102 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.google.sps:portfolio >----------------------
+[INFO] Building portfolio 1
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ portfolio ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sgupta/software-product-sprint/portfolio/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ portfolio ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /home/sgupta/software-product-sprint/portfolio/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ portfolio ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sgupta/software-product-sprint/portfolio/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ portfolio ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ portfolio ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-war-plugin:2.2:war (default-war) @ portfolio ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [portfolio] in [/home/sgupta/software-product-sprint/portfolio/target/portfolio-1]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/sgupta/software-product-sprint/portfolio/src/main/webapp]
+[INFO] Webapp assembled in [1090 msecs]
+[INFO] Building war: /home/sgupta/software-product-sprint/portfolio/target/portfolio-1.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[INFO] --- appengine-maven-plugin:2.2.0:run (default-cli) @ portfolio ---
+[INFO] GCLOUD: 2020-07-20 13:24:48.582:INFO::main: Logging initialized @713ms to org.eclipse.jetty.util.log.StdErrLog
+[INFO] GCLOUD: 2020-07-20 13:24:48.713:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+[INFO] GCLOUD: 2020-07-20 13:24:49.255:INFO:oejs.Server:main: jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_232-8u232-b09-1~deb9u1-b09
+[INFO] GCLOUD: 2020-07-20 13:24:51.266:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=1799ms
+[INFO] GCLOUD: 2020-07-20 13:24:51.364:WARN:oejw.WebAppContext:main: Failed startup of context c.g.a.t.d.j.DevAppEngineWebAppContext@6da21078{/,file:///home/sgupta/software-product-sprint/portfolio/target/portfolio-1/,UNAVAILABLE}{/home/sgupta/software-product-sprint/portfolio/target/portfolio-1}
+[INFO] GCLOUD: java.lang.IllegalStateException: Multiple servlets map to path /login-status: com.google.sps.servlets.LoginServlet[mapped:ANNOTATION:com.google.sps.servlets.LoginServlet],com.google.sps.servlets.LoginStatus[mapped:ANNOTATION:com.google.sps.servlets.LoginStatus]
+[INFO] GCLOUD: 	at org.eclipse.jetty.servlet.ServletHandler.updateMappings(ServletHandler.java:1404)
+[INFO] GCLOUD: 	at org.eclipse.jetty.servlet.ServletHandler.doStart(ServletHandler.java:162)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+[INFO] GCLOUD: 	at org.eclipse.jetty.security.SecurityHandler.doStart(SecurityHandler.java:405)
+[INFO] GCLOUD: 	at org.eclipse.jetty.security.ConstraintSecurityHandler.doStart(ConstraintSecurityHandler.java:419)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.ScopedHandler.doStart(ScopedHandler.java:120)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.session.SessionHandler.doStart(SessionHandler.java:504)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.ScopedHandler.doStart(ScopedHandler.java:120)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:883)
+[INFO] GCLOUD: 	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:356)
+[INFO] GCLOUD: 	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1445)
+[INFO] GCLOUD: 	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1409)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:825)
+[INFO] GCLOUD: 	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:275)
+[INFO] GCLOUD: 	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:524)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.Server.start(Server.java:407)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:110)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97)
+[INFO] GCLOUD: 	at org.eclipse.jetty.server.Server.doStart(Server.java:371)
+[INFO] GCLOUD: 	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.jetty9.JettyContainerService.startContainer(JettyContainerService.java:367)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.AbstractContainerService.startup(AbstractContainerService.java:283)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.AutomaticInstanceHolder.startUp(AutomaticInstanceHolder.java:26)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.AbstractModule.startup(AbstractModule.java:87)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.Modules.startup(Modules.java:105)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerImpl.doStart(DevAppServerImpl.java:271)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerImpl.access$000(DevAppServerImpl.java:44)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppServerImpl.java:220)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerImpl$1.run(DevAppServerImpl.java:218)
+[INFO] GCLOUD: 	at java.security.AccessController.doPrivileged(Native Method)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerImpl.start(DevAppServerImpl.java:218)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerMain$StartAction.apply(DevAppServerMain.java:404)
+[INFO] GCLOUD: 	at com.google.appengine.tools.util.Parser$ParseResult.applyArgs(Parser.java:45)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerMain.run(DevAppServerMain.java:257)
+[INFO] GCLOUD: 	at com.google.appengine.tools.development.DevAppServerMain.main(DevAppServerMain.java:248)
+[INFO] GCLOUD: 2020-07-20 13:24:51.400:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+[INFO] GCLOUD: 2020-07-20 13:24:51.401:INFO:oejs.session:main: node0 Scavenging disabled
+[INFO] GCLOUD: 2020-07-20 13:24:51.425:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@185d8b6{HTTP/1.1, (http/1.1)}{localhost:8080}
+[INFO] GCLOUD: 2020-07-20 13:24:51.434:INFO:oejs.Server:main: Started @3568ms
+[INFO] GCLOUD: Jul 20, 2020 7:54:51 AM com.google.appengine.tools.development.AbstractModule startup
+[INFO] GCLOUD: INFO: Module instance default is running at http://localhost:8080/
+[INFO] GCLOUD: Jul 20, 2020 7:54:51 AM com.google.appengine.tools.development.AbstractModule startup
+[INFO] GCLOUD: INFO: The admin console is running at http://localhost:8080/_ah/admin
+[INFO] GCLOUD: Jul 20, 2020 1:24:51 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+[INFO] GCLOUD: INFO: Dev App Server is now running

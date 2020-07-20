@@ -20,10 +20,18 @@ function getComments() {
     const commentListElement = document.getElementById('message-container');
     for (let i = 0; i <comments.length; i++) {
         commentListElement.appendChild(
-        createListElement(comments[i].message)
+        createCommentElement(comments[i].message, comments[i].email)
         );
     }
   });
+}
+
+/** Creates a comment. */
+function createCommentElement(message, email) {
+    const comment = createDivElement();
+    comment.append(createListElement(email));
+    comment.append(createParagraphElement(message));
+    return comment;
 }
 
 /** Creates an <li> element containing text. */
@@ -31,6 +39,18 @@ function createListElement(text) {
     const liElement = document.createElement('li');
     liElement.innerText = text;
     return liElement;
+}
+
+/** Creates an <p> element containing text. */
+function createParagraphElement(text) {
+    const paragraphElement = document.createElement('p');
+    paragraphElement.innerText = text;
+    return paragraphElement;
+}
+
+/** Creates an <div> element containing text. */
+function createDivElement(text) {
+    return document.createElement('div');
 }
 
 /**
