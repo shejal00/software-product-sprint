@@ -20,6 +20,9 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
+
 import com.google.sps.data.Comment;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
@@ -42,12 +45,13 @@ public class DataServlet extends HttpServlet {
         List<Comment> comments = new ArrayList<>();
         
         for (Entity entity : results.asIterable()) {
+            long id = entity.getKey().getId();
             String message = (String) entity.getProperty("message");
             long timestamp = (long) entity.getProperty("timestamp");
-            Comment comment = new Comment(timestamp, message);
+            String email = (String) entity.getProperty("email");
+            Comment comment = new Comment(id, timestamp, message, email);
             comments.add(comment);
         } 
-
         // Respond with the result.
         Gson gson = new Gson();    
         response.setContentType("application/json");
@@ -56,12 +60,24 @@ public class DataServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {       
+        UserService userService = UserServiceFactory.getUserService();
+
+        if (!userService.isUserLoggedIn()) {
+            response.sendRedirect("/index.html");
+            return;
+        }
         String message = getParameter(request, "message");
         long timestamp = System.currentTimeMillis();
-
+        String email = userService.getCurrentUser().getEmail();
+        if (message == null) {
+            response.setContentType("text/html");
+            response.getWriter().println("Message field can't be empty.");
+            return;
+        }
         Entity commentEntity = new Entity("Comment");
         commentEntity.setProperty("message", message);
         commentEntity.setProperty("timestamp", timestamp);
+        commentEntity.setProperty("email", email);
 
         datastore.put(commentEntity);
         response.sendRedirect("/index.html");

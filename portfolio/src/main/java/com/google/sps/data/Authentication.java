@@ -14,17 +14,13 @@
 
 package com.google.sps.data;
 
-public class Comment {
+public class Authentication {
 
-    private final long id;
-    private final long timestamp;
-    private final String message;
-    private final String email;
-    
-    public Comment(long id, long timestamp, String message, String email) {
-        this.id = id;
-        this.timestamp = timestamp;
-        this.message = message;
-        this.email = email;
+    private final boolean checkLoggedIn;
+    private final String redirectToThisUrl;
+
+    public Authentication(boolean checkLoggedIn, String redirectToThisUrl) {
+        this.checkLoggedIn = checkLoggedIn;
+        this.redirectToThisUrl = redirectToThisUrl;
     }
 }

@@ -14,7 +14,7 @@
     </head>
 
 <!-- Navigation Bar -->
-    <body data-spy="scroll" data-target="#navbar" data-offset="90" onload="getComments()"> 
+    <body data-spy="scroll" data-target="#navbar" data-offset="90" onload="toggleForm()"> 
         <nav class="navbar navbar-fixed-top navbar-inverse" id="navbar">
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu">
                 <div class="container">
@@ -279,6 +279,8 @@
             
 <!-- Competitions -->
         <section id="competitions" class="section">
+            <h1 class="text-center">Competitions</h1>
+            <hr class="star-portfolio">
             <div class="content" >
                 <!-- card -->
                 <div class="card">
@@ -333,7 +335,7 @@
                 <h1 class="intro-text text-center">Comments</h1>   
                 <hr class="star-light">
                 <p id="message-container" class="comments-text"></p>
-                <form action="/comments" method="post" class="contact-form">
+                <form action="/comments" method="post" class="contact-form" id="form-container">
                     <div class="col-sm-12">
                         <textarea name="message" class="form-control" rows="5" placeholder="Share your thoughts"></textarea>
                     </div>
@@ -341,6 +343,12 @@
                         <button class="btn btn-default submit-button btn-lg btn-primary" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
                     </div>
                 </form>
+                <div class="comments-text text-center" id="login-container">
+                    For commenting, login <a id="login-url">here</a>
+                </div>
+                <div class="comments-text text-center" id="logout-container">
+                    To logout, click <a id="logout-url">here</a>
+                </div>
             </div>
         </div>
 

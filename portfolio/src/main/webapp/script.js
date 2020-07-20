@@ -13,17 +13,48 @@
 // limitations under the License.
 
 /**
- * Returns comments in the form of list
+ * Returns comment form only if the user is logged in.
+ */
+async function toggleForm(){
+    await getComments();
+    const response = await fetch('/authentication');
+    const userResponse = await response.json();
+    const commentForm = document.getElementById('form-container');
+    const logoutContainer = document.getElementById('logout-container');
+    const loginContainer = document.getElementById('login-container');
+    const loginUrl = document.getElementById('login-url');
+    const logoutUrl = document.getElementById('logout-url');
+
+    if (userResponse.checkLoggedIn) {
+        loginContainer.hidden = true;
+        logoutUrl.href = userResponse.redirectToThisUrl;
+    } else {
+        commentForm.hidden = true;
+        logoutContainer.hidden = true;
+        loginUrl.href = userResponse.redirectToThisUrl;
+    }
+}
+
+/**
+ * Returns comments in the form of list.
  */
 function getComments() {
     fetch('/comments').then(response => response.json()).then((comments) => {
     const commentListElement = document.getElementById('message-container');
     for (let i = 0; i <comments.length; i++) {
         commentListElement.appendChild(
-        createListElement(comments[i].message)
+        createCommentElement(comments[i].message, comments[i].email)
         );
     }
   });
+}
+
+/** Creates a comment. */
+function createCommentElement(message, email) {
+    const comment = createDivElement();
+    comment.append(createListElement(email));
+    comment.append(createParagraphElement(message));
+    return comment;
 }
 
 /** Creates an <li> element containing text. */
@@ -31,6 +62,18 @@ function createListElement(text) {
     const liElement = document.createElement('li');
     liElement.innerText = text;
     return liElement;
+}
+
+/** Creates an <p> element containing text. */
+function createParagraphElement(text) {
+    const paragraphElement = document.createElement('p');
+    paragraphElement.innerText = text;
+    return paragraphElement;
+}
+
+/** Creates an <div> element containing text. */
+function createDivElement(text) {
+    return document.createElement('div');
 }
 
 /**
