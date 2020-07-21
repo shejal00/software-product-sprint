@@ -12,30 +12,69 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * Returns comment form only if the user is logged in.
+ */
+async function toggleForm(){
+    await getComments();
+    const response = await fetch('/authentication');
+    const userResponse = await response.json();
+    const commentForm = document.getElementById('form-container');
+    const logoutContainer = document.getElementById('logout-container');
+    const loginContainer = document.getElementById('login-container');
+    const loginUrl = document.getElementById('login-url');
+    const logoutUrl = document.getElementById('logout-url');
 
-// // // navbar
-// $(function() {
-//     $('a[href="#toggle-search"], .navbar-bootsnipp .bootsnipp-search .input-group-btn > .btn[type="reset"]').on('click', function(event) {
-//         event.preventDefault();
-//         $('.navbar-bootsnipp .bootsnipp-search .input-group > input').val('');
-//         $('.navbar-bootsnipp .bootsnipp-search').toggleClass('open');
-//         $('a[href="#toggle-search"]').closest('li').toggleClass('active');
+    if (userResponse.checkLoggedIn) {
+        loginContainer.hidden = true;
+        logoutUrl.href = userResponse.redirectToThisUrl;
+    } else {
+        commentForm.hidden = true;
+        logoutContainer.hidden = true;
+        loginUrl.href = userResponse.redirectToThisUrl;
+    }
+}
 
-//         if ($('.navbar-bootsnipp .bootsnipp-search').hasClass('open')) {
-//             /* I think .focus dosen't like css animations, set timeout to make sure input gets focus */
-//             setTimeout(function() { 
-//                 $('.navbar-bootsnipp .bootsnipp-search .form-control').focus();
-//             }, 100);
-//         }           
-//     });
+/**
+ * Returns comments in the form of list.
+ */
+function getComments() {
+    fetch('/comments').then(response => response.json()).then((comments) => {
+    const commentListElement = document.getElementById('message-container');
+    for (let i = 0; i <comments.length; i++) {
+        commentListElement.appendChild(
+        createCommentElement(comments[i].message, comments[i].email)
+        );
+    }
+  });
+}
 
-//     $(document).on('keyup', function(event) {
-//         if (event.which == 27 && $('.navbar-bootsnipp .bootsnipp-search').hasClass('open')) {
-//             $('a[href="#toggle-search"]').trigger('click');
-//         }
-//     });
-    
-// });
+/** Creates a comment. */
+function createCommentElement(message, email) {
+    const comment = createDivElement();
+    comment.append(createListElement(email));
+    comment.append(createParagraphElement(message));
+    return comment;
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
+}
+
+/** Creates an <p> element containing text. */
+function createParagraphElement(text) {
+    const paragraphElement = document.createElement('p');
+    paragraphElement.innerText = text;
+    return paragraphElement;
+}
+
+/** Creates an <div> element containing text. */
+function createDivElement(text) {
+    return document.createElement('div');
+}
 
 /**
  * Adds a random greeting to the page.
